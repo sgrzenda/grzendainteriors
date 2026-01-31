@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://grzendainteriors.com/sitemap.xml
+
+# Block access to admin/development files
+Disallow: /.git/
+Disallow: /.kiro/
+Disallow: /README.md
