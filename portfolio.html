@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View our portfolio of completed interior design projects for residential spaces.">
+    <title>Portfolio - Grzenda Interiors</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Grzenda Interiors</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <p>Explore our collection of completed residential design projects</p>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <div class="gallery-grid" id="portfolio-grid">
+                <!-- Portfolio images will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox container -->
+    <div id="lightbox-container">
+        <!-- Lightbox overlays will be dynamically added here -->
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Grzenda Interiors. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a>
+                <a href="https://instagram.com/grzenda_interiors" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Generate portfolio items dynamically
+        const portfolioGrid = document.getElementById('portfolio-grid');
+        const lightboxContainer = document.getElementById('lightbox-container');
+        
+        // Generate 56 portfolio items
+        for (let i = 1; i <= 56; i++) {
+            // Create gallery item
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            
+            const galleryLink = document.createElement('a');
+            galleryLink.href = `#lightbox-${i}`;
+            galleryLink.className = 'gallery-link';
+            
+            const img = document.createElement('img');
+            img.src = `images/portfolio/project-${i}.jpg`;
+            img.alt = 'Interior design project';
+            img.onerror = function() {
+                this.parentElement.parentElement.style.display = 'none';
+            };
+            
+            galleryLink.appendChild(img);
+            galleryItem.appendChild(galleryLink);
+            portfolioGrid.appendChild(galleryItem);
+            
+            // Create lightbox
+            const lightbox = document.createElement('div');
+            lightbox.id = `lightbox-${i}`;
+            lightbox.className = 'lightbox';
+            
+            const closeBtn = document.createElement('a');
+            closeBtn.href = '#';
+            closeBtn.className = 'lightbox-close';
+            closeBtn.innerHTML = '&times;';
+            
+            const lightboxImg = document.createElement('img');
+            lightboxImg.src = `images/portfolio/full/project-${i}.jpg`;
+            lightboxImg.alt = 'Interior design project';
+            
+            lightbox.appendChild(closeBtn);
+            lightbox.appendChild(lightboxImg);
+            lightboxContainer.appendChild(lightbox);
+        }
+    </script>
+</body>
+</html>
