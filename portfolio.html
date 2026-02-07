@@ -141,5 +141,17 @@
     <div class="lightbox" id="lightbox-55"><a href="#" class="lightbox-close">&times;</a><img src="images/portfolio/full/project-55.jpg" alt="Interior design project"></div>
     <div class="lightbox" id="lightbox-56"><a href="#" class="lightbox-close">&times;</a><img src="images/portfolio/full/project-56.jpg" alt="Interior design project"></div>
     <div class="lightbox" id="lightbox-57"><a href="#" class="lightbox-close">&times;</a><img src="images/portfolio/full/project-57.jpg" alt="Interior design project"></div>
+
+    <script>
+    document.querySelectorAll('.lightbox-close').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var scrollPos = window.scrollY;
+            window.location.hash = '_';
+            history.replaceState(null, '', window.location.pathname);
+            window.scrollTo(0, scrollPos);
+        });
+    });
+    </script>
 </body>
 </html>
