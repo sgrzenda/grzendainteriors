@@ -429,72 +429,6 @@ a {
     max-width: 800px;
 }
 
-/* Blog */
-.blog-listing {
-    padding: 5rem 0;
-}
-
-.blog-card {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid var(--light-sage);
-}
-
-.blog-card:last-child {
-    border-bottom: none;
-}
-
-.blog-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.blog-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.blog-date {
-    font-size: 0.875rem;
-    color: var(--sage-green);
-    margin-bottom: 0.5rem;
-}
-
-.blog-content h2 {
-    font-size: 1.75rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-}
-
-.blog-content h2 a {
-    color: var(--dark-sage);
-    transition: color 0.3s;
-}
-
-.blog-content h2 a:hover {
-    color: var(--sage-green);
-}
-
-.blog-content p {
-    color: var(--soft-gray);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-}
-
-.read-more {
-    color: var(--dark-sage);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.read-more:hover {
-    color: var(--sage-green);
-}
-
 /* Contact Page */
 .contact-content {
     padding: 5rem 0;
@@ -631,10 +565,6 @@ a {
         gap: 2rem;
     }
     
-    .blog-card {
-        grid-template-columns: 1fr;
-    }
-    
     .process-steps {
         grid-template-columns: 1fr;
     }
@@ -671,64 +601,6 @@ a {
     }
 }
 
-/* Blog Post Styles */
-.blog-post {
-    padding: 3rem 0;
-}
-
-.post-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.post-header h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin-bottom: 0.5rem;
-    color: var(--dark-sage);
-}
-
-.post-featured-image {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    margin: 0 auto 3rem;
-}
-
-.post-content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.post-content p {
-    color: var(--soft-gray);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.post-content h2 {
-    font-size: 1.75rem;
-    font-weight: 400;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--dark-sage);
-}
-
-.post-navigation {
-    max-width: 700px;
-    margin: 3rem auto 0;
-    padding-top: 2rem;
-    border-top: 1px solid var(--light-sage);
-}
-
-.post-navigation a {
-    color: var(--soft-gray);
-    transition: color 0.3s;
-}
-
-.post-navigation a:hover {
-    color: var(--dark-sage);
-}
 /* Lightbox Styles */
 .gallery-link {
     display: block;
